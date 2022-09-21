@@ -4,6 +4,8 @@
 @import url('styles/topics.css');
 @import url('styles/contact.css');
 @import url('styles/footer.css');
+@import url('styles/register.css');
+@import url('styles/form.css');
 
 :root {
     --grey: #EBECEE;
@@ -11,6 +13,7 @@
     --black: #000000;
     --orange: #EB9B00;
     --blue: #002F52;
+    --red: #FF3D3D;
     --gradient-blue: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
     --main-font: 'Poppins';
     --secondary-font: 'Josefin Sans';
