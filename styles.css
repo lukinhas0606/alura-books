@@ -8,19 +8,22 @@
 @import url('styles/form.css');
 
 :root {
-    --grey: #EBECEE;
+    --bg-grey: #EBECEE;
+    --bg-footer: #F9F9F9;
     --white: #FFFFFF;
     --black: #000000;
     --orange: #EB9B00;
     --blue: #002F52;
     --red: #FF3D3D;
+    --grey: #474646;
+    --light-grey: #858585;
     --gradient-blue: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
     --main-font: 'Poppins';
     --secondary-font: 'Josefin Sans';
 }
 
 body {
-    background-color: var(--grey); 
+    background-color: var(--bg-grey); 
     font-family: var(--main-font), sans-serif;
     font-size: 16px;
     font-weight: 400;

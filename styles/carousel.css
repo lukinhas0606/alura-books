@@ -41,7 +41,7 @@
     align-items: center;
 }
 
-.card__description{
+.card__description {
     margin-bottom: 0.5em;
     gap: 0.5em;
 }
@@ -55,14 +55,14 @@
     color: var(--orange);
 }
 
-.card__description .description__book-title{
+.card__description .description__book-title {
     font-size: 18px;
     font-weight: 700;
     color: var(--blue);
     margin: 0.5em 0;
 }
 
-.card__description .description__text{
+.card__description .description__text {
     font-size: 14px;
 }
 
@@ -79,4 +79,66 @@
     color: var(--white);
     background-color: var(--orange);
     padding: 1em 1.7em;
+}
+
+@media screen and (min-width: 1024px) {
+    .carousel__title {
+        font-size: 26px;
+    }
+
+    .swiper {
+        width: 70%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
+        top: 60%;
+    }
+
+    .swiper-pagination {
+        margin: 1em 0 3em;
+    }
+
+    .card {
+        width: 50%;
+        margin: 4em auto;
+    }
+
+    .card__description {
+        align-items: flex-start;
+        padding: 1em 0;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .carousel__container {
+        display: flex;
+        margin: 3em 12vw 5em;
+        align-items: center;
+        gap: 3em;
+    }
+
+    .swiper {
+        width: 50%;
+    }
+
+    .card {
+        margin: 6em auto 1em;
+        width: 45%
+    }
+
+    .card__description {
+        gap: 4em;
+        padding: 0 0 1em;
+    }
+
+    .description__title {
+        font-size: 32px;
+        line-height: 1.5em;
+    }
+
+    .description__text {
+        font-size: 16px;
+    }
 }

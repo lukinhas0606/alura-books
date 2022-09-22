@@ -33,3 +33,26 @@
     color: var(--white);
     text-decoration: none;
 }
+
+@media screen and (min-width: 1024px) {
+    .topics__title,
+    .topics__anchor {
+        font-size: 24px;
+    }
+
+    .topics__title {
+        margin: 1em 0 1.5em;
+    }
+
+    .topics__item {
+        margin: 1em;
+        padding: 2em;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .topics {
+        padding: 3em 20vw;
+    }
+}
