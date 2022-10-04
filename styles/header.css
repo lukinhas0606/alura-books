@@ -10,10 +10,11 @@
 .container {
     display: flex;
     align-items: center;
+    height: 80px;
 }
 
 .container__icon {
-    padding: 1em;
+    padding: 0 .6em;
 }
 
 /* HAMBURGER MENU */
