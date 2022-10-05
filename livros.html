@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles/books.css">
+  <title>Alura Books | Livros</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <input type="checkbox" id="menu" class="container__button">
+      <!-- menu icon is inside the label to link it to the checkbox when the icon is clicked -->
+      <label for="menu" class="container__label">
+        <span class="header__hamburger-menu container__icon "></span>
+      </label>
+      <ul class="menu-list">
+        <li class="menu-list__title">Categorias</li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">PROGRAMAÇÃO</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">FRONT-END</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">INFRAESTRUTURA</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">BUSINESS</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">DESIGN & UX</a></li>
+      </ul>
+      <img src="img/Logo.svg" alt="Logo da Alura Books" class="container__icon">
+      <h1 class="container__title"><b class="container__title--bold">Alura</b>Books</h1>
+    </div>
+
+    <ul class="nav-options">
+      <!-- replicating the same content and logic used for hamburger-menu; I tried to use one single menu-list, but couldn't get a good position to it using CSS -->
+      <input type="checkbox" id="options__menu" class="options__button">
+      <label for="options__menu" class="options__label">
+        <li class="options__item">Categorias</li>
+      </label>
+      <ul class="menu-list">
+        <li class="menu-list__item"><a href="#" class="menu-list__link">PROGRAMAÇÃO</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">FRONT-END</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">INFRAESTRUTURA</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">BUSINESS</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">DESIGN & UX</a></li>
+      </ul>
+      <li class="options__item"><a href="#" class="options__link">Favoritos</a></li>
+      <li class="options__item"><a href="#" class="options__link">Minha Estante</a></li>
+    </ul>
+
+    <div class="container">
+      <a href="#"><img src="img/Favoritos.svg" alt="Itens favoritos"
+          class="container__icon container__icon--visible"></a>
+      <a href="#" class="container__anchor">
+        <img src="img/Compras.svg" alt="Carrinho de compras" class="container__icon">
+        <span class="container__text">Minha sacola</span>
+      </a>
+      <a href="#" class="container__anchor">
+        <img src="img/Usuario.svg" alt="Menu do usuário" class="container__icon">
+        <span class="container__text">Meu perfil</span>
+      </a>
+    </div>
+  </header>
+
+  <section class="banner">
+    <h2 class="banner__title">Melhores livros de Programação</h2>
+    <p class="banner__text">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
+  </section>
+
+  <!-- this HTML was provided in the course, so classes were named in portuguese -->
+  <nav class="wrap">
+    <ul class="nav">
+      <li><button class="btn btn-front" href="#" id="btnFiltrarLivrosFront" value="front-end">LIVROS DE
+          FRONT-END</button>
+      </li>
+      <li><button class="btn btn-back" href="#" id="btnFiltrarLivrosBack" value="back-end">LIVROS DE BACK-END</button>
+      </li>
+      <li><button class="btn btn-dados" href="#" id="btnFiltrarLivrosDados" value="dados">LIVROS DE DADOS</button></li>
+      <li><button class="btn btn-disponiveis" href="#" id="btnLivrosDisponiveis" value="disponivel">LIVROS DISPONÍVEIS</button></li>
+      <li><button class="btn btn-ordenacao" href="#" id="btnOrdenarPorPreco">ORDENAR POR PREÇO</button></li>
+    </ul>
+  </nav>
+
+  <section class="livros wrap" id="livros">
+    <!-- We'll dinamically fill this section using JavaScript -->
+  </section>
+  <section id="valor_total_livros_disponiveis">
+    <div class="livros__disponiveis">
+      <p>Todos os livros disponíveis por R$ <span id="valor">299,00</span></p>
+    </div>
+  </section>
+
+  <hr />
+
+  <footer>
+    <h2 class="footer__title">Grupo Alura</h2>
+    <ul class="footer__list">
+      <li class="footer__list-title">Educação</li>
+      <li class="footer__list-item">
+        <img src="img/Caelum.png" alt="logo da empresa Caelum">
+        <a href="#" class="footer__list-anchor">Caelum</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/CasaDoCodigo.png" alt="logo da empresa Casa do Código">
+        <a href="#" class="footer__list-anchor">Casa do Código</a>
+      </li>
+    </ul>
+    <ul class="footer__list">
+      <li class="footer__list-title">Educação Online</li>
+      <li class="footer__list-item">
+        <img src="img/Alura.png" alt="logo da empresa Alura">
+        <a href="#" class="footer__list-anchor">Alura</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/AluraEmpresas.png" alt="logo da empresa Alura para empresas">
+        <a href="#" class="footer__list-anchor">Alura para Empresas</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/AluraLatam.png" alt="logo da empresa Alura LATAM">
+        <a href="#" class="footer__list-anchor">Alura LATAM</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/AluraStart.png" alt="logo da empresa Alura Start">
+        <a href="#" class="footer__list-anchor">Alura Start</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/MusicDot.png" alt="logo da empresa MusicDot">
+        <a href="#" class="footer__list-anchor">MusicDot</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/AluraLingua.png" alt="logo da empresa Alura Língua">
+        <a href="#" class="footer__list-anchor">Alura Língua</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/PM3.png" alt="logo da empresa PM3">
+        <a href="#" class="footer__list-anchor">PM3</a>
+      </li>
+    </ul>
+    <ul class="footer__list">
+      <li class="footer__list-title">Comunidade</li>
+      <li class="footer__list-item">
+        <img src="img/HipstersTech.png" alt="logo da comunidade Hipsters ponto Tech">
+        <a href="#" class="footer__list-anchor">Hipsters ponto Tech</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/Scuba.png" alt="logo da comunidade Scuba Dev">
+        <a href="#" class="footer__list-anchor">Scuba Dev</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/Layers.png" alt="logo da comunidade Layers ponto Tech">
+        <a href="#" class="footer__list-anchor">Layers ponto Tech</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/LikeABoss.png" alt="logo da comunidade Like a Boss">
+        <a href="#" class="footer__list-anchor">Like a Boss</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/CarreiraSemFronteira.png" alt="logo da comunidade Carreira sem Fronteira">
+        <a href="#" class="footer__list-anchor">Carreira sem Fronteira</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/HipstersJobs.png" alt="logo da comunidade Hipsters ponto Job">
+        <a href="#" class="footer__list-anchor">Hipsters ponto Job</a>
+      </li>
+      <li class="footer__list-item">
+        <img src="img/GUJ.png" alt="logo da comunidade GUJ">
+        <a href="#" class="footer__list-anchor">GUJ</a>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="js/books.js"></script>
+
+</body>
+
+</html>
